@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-
 import "./App.css";
 import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
