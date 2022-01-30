@@ -48,9 +48,10 @@ export const SidebarMenu = styled.ul`
 `
 
 export const SidebarLink = styled(LinkS)`
-    color: #ffffff;
+    color: #0C4271;
     display: flex;
     align-items: center;
+    justify-self: center;
     list-style: none;
     text-decoration: none;
     transition: 0.2s ease-in-out;
