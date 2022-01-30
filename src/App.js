@@ -15,6 +15,10 @@ const App = () => {
     <Router>
       <Navbar toggle={toggle} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
+      <section className="ax__hero">
+        <h1 className="ax__hero__text">Our Sectors</h1>
+      </section>
+      
     </Router>
     );
 };
