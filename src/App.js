@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 
 import "./App.css";
 import Navbar from './components/navbar';
@@ -16,9 +18,9 @@ const App = () => {
       <Navbar toggle={toggle} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <section className="ax__hero">
-        <h1 className="ax__hero__text">Our Sectors</h1>
+        <motion.h1 className="ax__hero__text">Our Sectors</motion.h1>
       </section>
-      
+
     </Router>
     );
 };
