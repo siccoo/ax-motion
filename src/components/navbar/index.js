@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa"
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarElements';
 import AXLogo from "../../assets/images/ax-logo.jpeg";
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
     return (
         <>
             <Nav>
@@ -11,7 +11,7 @@ const Navbar = () => {
                     <NavLogo to="/">
                         <img src={AXLogo} alt='ax-logo' className='ax-logo' style={{ width: 100 + "px" }} />
                     </NavLogo>
-                    <MobileIcon>
+                    <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
                     <NavMenu>
