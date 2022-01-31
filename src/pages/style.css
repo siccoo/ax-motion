@@ -2,6 +2,7 @@
     max-width: 1440px;
     margin-left: 150px;
     margin-right: 10px;
+    padding-top: 30px;
 }
 
 .img__list {
@@ -17,7 +18,7 @@
 }
 
 .img__list li img {
-    height: 350px;
+    height: 420px;
 }
 
 .img__list li img:hover {

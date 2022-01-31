@@ -46,7 +46,7 @@ const imageVariants = {
     visible: {
         opacity: 1,
         scale: 2,
-        transition: {duration: 1}                                                                                                                                                                           
+        transition: { duration: 1 }
     },
     hidden: {
         opacity: 0,
@@ -61,11 +61,14 @@ const ImgContainer = () => {
                 {axProducts.map((item, i) => (
                     <li key={item._id} item={item}>
                         <a target="_blank" href='#'>
-                            <motion.img 
-                                src={item.image} 
-                                alt='ax-images' 
+                            <motion.img
+                                src={item.image}
+                                alt='ax-images'
                                 variants={imageVariants}
-                                animate={{scale: 2}}
+                                whileInView={{
+                                    scale: 4
+                                }}
+                            // initial="hidden"
                             />
                         </a>
                     </li>
