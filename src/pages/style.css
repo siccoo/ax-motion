@@ -1,18 +1,25 @@
 .content__wrap {
     max-width: 1440px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 150px;
+    margin-right: 10px;
 }
 
 .img__list {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     grid-gap: 0.3rem;
 }
 
 .img__list li {
     overflow: hidden;
-    /* background: rgb(255, 255, 255);  */
-    transition: box-shadow 0.3s ease-in 0s; 
-    filter: #0C4271 (80%);
+    background: rgb(255, 255, 255); 
+    transition: box-shadow 0.3s ease-in 0s;  
+}
+
+.img__list li img {
+    height: 350px;
+}
+
+.img__list li img:hover {
+    filter: #0C4271 (60%);
 }
