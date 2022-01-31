@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -45,7 +45,7 @@ const axProducts = [
 const imageVariants = {
     visible: {
         opacity: 1,
-        scale: 2,
+        scale: 4,
         transition: { duration: 1 }
     },
     hidden: {
@@ -66,9 +66,9 @@ const ImgContainer = () => {
                                 alt='ax-images'
                                 variants={imageVariants}
                                 whileInView={{
-                                    scale: 4
+                                    scale: 1.2
                                 }}
-                            // initial="hidden"
+                                transition={{ type: "keyframes", duration: 2, bounce: 0.3 }}
                             />
                         </a>
                     </li>
