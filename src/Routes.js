@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/Home';
-import AxHome from './pages/AxHome';
+import AxHome from './pages/axhome/AxHome';
 import history from './history';
 
 const Routes = () => {

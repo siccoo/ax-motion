@@ -1,0 +1,16 @@
+.left__side {
+    background: #0C4271;
+    width: 80%;
+    float: left;
+    height: 100vh;
+}
+
+.right__side {
+    background-image: url("../../assets/images/ax-img5.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    width: 20%;
+    float: left;
+    height: 100vh;
+}
