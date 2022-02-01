@@ -12,7 +12,7 @@ const AxHome = () => {
         <Navbar />
         <div className="left__side">
           <span className='close__btn'>
-            <RiCloseFill style={{ color: "#fff" }} />
+            <RiCloseFill style={{ color: "#0C4271" }} />
           </span>
         </div>
         <div className='right__side'>
