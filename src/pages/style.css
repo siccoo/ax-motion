@@ -1,3 +1,20 @@
+.ax__hero {
+    padding: 2px 0 2px 0;
+  }
+  
+  .ax__hero__text {
+    color: #0C4271;
+    font-size: 185px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .ax__hero__text {
+      font-size: 45px;
+    }
+  }
+
 .content__wrap {
     max-width: 1440px;
     margin-left: 150px;
@@ -24,3 +41,4 @@
 .img__list li img:hover {
     filter: #0C4271 (60%);
 }
+

@@ -5,19 +5,3 @@
   font-family: "Encode Sans Expanded", Arial, Helvetica, sans-serif;
 }
 
-.ax__hero {
-  padding: 2px 0 2px 0;
-}
-
-.ax__hero__text {
-  color: #0C4271;
-  font-size: 185px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-@media screen and (max-width: 480px) {
-  .ax__hero__text {
-    font-size: 45px;
-  }
-}

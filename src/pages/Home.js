@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import history from '../history';
+import { useHistory } from 'react-router-dom';
+
+import Navbar from '../components/navbar';
+import Sidebar from '../components/sidebar';
 
 import AxImg1 from "../assets/images/ax-img1.jpeg";
 import AxImg2 from "../assets/images/ax-img2.jpeg";
@@ -56,39 +59,57 @@ const imageVariants = {
     }
 }
 
+
+
 const Home = () => {
+    const history = useHistory()
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+        setIsOpen(!isOpen)
+    }
+
     return (
-        <div className='content__wrap'>
-            <ul className='img__list'>
-                {axProducts.map((item, i) => (
-                    <motion.li 
-                        key={item._id} 
-                        item={item}
-                        animate={{ y: ["0px", "-60px"]}}
-                        transition={{ 
-                            y: {
-                            duration: 1,
-                            yoyo: Infinity,  
-                            ease: "easeIn"
-                            } 
-                        }}
-                        scale={{}}
-                    >
-                        <Link>
-                            <motion.img
-                                src={item.image}
-                                alt='ax-images'
-                                variants={imageVariants}
-                                whileInView={{
-                                    scale: 1.2
+
+        <section>
+            <Navbar toggle={toggle} />
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+            <div className="ax__hero">
+                <motion.h1 className="ax__hero__text">Our Sectors</motion.h1>
+                <div className='content__wrap'>
+                    <ul className='img__list'>
+                        {axProducts.map((item, i) => (
+                            <motion.li
+                                key={item._id}
+                                item={item}
+                                animate={{ y: ["0px", "-60px"] }}
+                                transition={{
+                                    y: {
+                                        duration: 1,
+                                        yoyo: Infinity,
+                                        ease: "easeIn"
+                                    }
                                 }}
+                                scale={{}}
                                 onClick={() => history.push("/axhome")}
-                            />
-                        </Link>
-                    </motion.li>
-                ))}
-            </ul>
-        </div>
+                            >
+                                {/* <Link > */}
+                                    <motion.img
+                                        src={item.image}
+                                        alt='ax-images'
+                                        variants={imageVariants}
+                                        whileInView={{
+                                            scale: 1.2
+                                        }}
+                                    />
+                                {/* </Link> */}
+                            </motion.li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
     );
 };
 
