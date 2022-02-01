@@ -59,7 +59,18 @@ const ImgContainer = () => {
         <div className='content__wrap'>
             <ul className='img__list'>
                 {axProducts.map((item, i) => (
-                    <li key={item._id} item={item}>
+                    <motion.li 
+                        key={item._id} 
+                        item={item}
+                        animate={{ y: ["0px", "100px"] }}
+                        transition={{ 
+                            y: {
+                            duration: 1,
+                            yoyo: Infinity,  
+                            ease: "easeIn",
+                            } 
+                        }}
+                    >
                         <a target="_blank" href='#'>
                             <motion.img
                                 src={item.image}
@@ -68,10 +79,9 @@ const ImgContainer = () => {
                                 whileInView={{
                                     scale: 1.2
                                 }}
-                                transition={{ type: "keyframes", duration: 2, bounce: 0.3 }}
                             />
                         </a>
-                    </li>
+                    </motion.li>
                 ))}
             </ul>
         </div>
