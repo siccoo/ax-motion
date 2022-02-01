@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import history from '../history';
 
 import AxImg1 from "../assets/images/ax-img1.jpeg";
 import AxImg2 from "../assets/images/ax-img2.jpeg";
@@ -54,7 +56,7 @@ const imageVariants = {
     }
 }
 
-const ImgContainer = () => {
+const Home = () => {
     return (
         <div className='content__wrap'>
             <ul className='img__list'>
@@ -67,12 +69,12 @@ const ImgContainer = () => {
                             y: {
                             duration: 1,
                             yoyo: Infinity,  
-                            ease: "easeIn",
+                            ease: "easeIn"
                             } 
                         }}
                         scale={{}}
                     >
-                        <a target="_blank" href='#'>
+                        <Link>
                             <motion.img
                                 src={item.image}
                                 alt='ax-images'
@@ -80,8 +82,9 @@ const ImgContainer = () => {
                                 whileInView={{
                                     scale: 1.2
                                 }}
+                                onClick={() => history.push("/axhome")}
                             />
-                        </a>
+                        </Link>
                     </motion.li>
                 ))}
             </ul>
@@ -89,4 +92,4 @@ const ImgContainer = () => {
     );
 };
 
-export default ImgContainer;
+export default Home;
