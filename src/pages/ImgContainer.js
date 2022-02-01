@@ -62,7 +62,7 @@ const ImgContainer = () => {
                     <motion.li 
                         key={item._id} 
                         item={item}
-                        animate={{ y: ["0px", "100px"] }}
+                        animate={{ y: ["0px", "-60px"] }}
                         transition={{ 
                             y: {
                             duration: 1,
