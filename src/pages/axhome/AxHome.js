@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/navbar';
+import { RiCloseFill } from "react-icons/ri";
+
 import "./axhome.css";
 
 
@@ -9,10 +11,12 @@ const AxHome = () => {
       <div>
         <Navbar />
         <div className="left__side">
-            hello
+          <span className='close__btn'>
+            <RiCloseFill style={{ color: "#fff" }} />
+          </span>
         </div>
         <div className='right__side'>
-            hi
+
         </div>
       </div>
     </>

@@ -5,11 +5,17 @@
     height: 100vh;
 }
 
+.left__side .close__btn {
+    border-radius: 50%;
+    background: #fff;
+    
+    margin: 20px 30px;
+}
+
 .right__side {
     background-image: url("../../assets/images/ax-img5.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    
     width: 20%;
     float: left;
     height: 100vh;
