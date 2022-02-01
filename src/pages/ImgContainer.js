@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -62,7 +62,7 @@ const ImgContainer = () => {
                     <motion.li 
                         key={item._id} 
                         item={item}
-                        animate={{ y: ["0px", "-60px"] }}
+                        animate={{ y: ["0px", "-60px"]}}
                         transition={{ 
                             y: {
                             duration: 1,
@@ -70,6 +70,7 @@ const ImgContainer = () => {
                             ease: "easeIn",
                             } 
                         }}
+                        scale={{}}
                     >
                         <a target="_blank" href='#'>
                             <motion.img
